@@ -32,12 +32,10 @@
 * [💽 Boot Apps](power-users/boot-apps.md)
 * [🦠 Diagnostics](power-users/diagnostics.md)
 
-## Reference
-
-* [📰 API Reference](reference/api-reference.md)
-
 ***
 
+* [🧱 Project Dependencies](project-dependencies.md)
 * [Report an issue](https://github.com/Aptivi/GRILO/issues/new)
 * [Source code](https://github.com/Aptivi/GRILO)
 * [Our projects](https://github.com/Aptivi)
+* [API Reference](https://aptivi.github.io/GRILO/)
