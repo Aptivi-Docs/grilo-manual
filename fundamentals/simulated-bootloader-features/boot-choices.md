@@ -14,4 +14,7 @@ The general controls that GRILO makes use of (and are non-overridable) are liste
 
 * `UP ARROW`: Chooses the boot entry above the current selection. If the current selection is the first selection, it'll go to the last entry available.
 * `DOWN ARROW`: Chooses the boot entry below the current selection. If the current selection is the last selection, it'll go to the first entry available.
+* `HOME`: Goes to the first entry
+* `END`: Goes to the last entry
+* `SHIFT + H`: Shows the help information (lists available controls for both GRILO and boot style-defined keybindings)
 * `ENTER`: Boots to the selected bootable application.

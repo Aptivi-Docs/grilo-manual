@@ -7,6 +7,8 @@
 * [🗞 Version Release Notes](versions/version-release-notes/README.md)
   * [💎 API v1.0 series](versions/version-release-notes/api-v1.0-series.md)
   * [🎆 API v2.0 series](versions/version-release-notes/api-v2.0-series.md)
+* [🗒 Compatibility Notes](versions/compatibility-notes/README.md)
+  * [🔼 Upgrading from API v1.0](versions/compatibility-notes/upgrading-from-api-v1.0.md)
 
 ## Installation
 

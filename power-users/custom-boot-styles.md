@@ -29,6 +29,7 @@ To implement your custom boot style, these steps must be followed:
    * `public override void RenderHighlight(int chosenBootEntry)`
    * `public override void RenderModalDialog(string content)`
    * `public override void RenderBootingMessage(string chosenBootName)`
+   * `public override void RenderBootFailedMessage(string content)`
 9. Now, implement everything as you wish. Once you're done, click on the Build menu and select Build Solution.
 10. Once the solution is built, open the file explorer to the solution directory by right-clicking on the solution and selecting `Open Folder in File Explorer`.
 11. Navigate to the output directory and copy the `.dll` file to `Splashes` under the `%localappdata%/GRILO` folder.

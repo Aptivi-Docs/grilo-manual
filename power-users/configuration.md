@@ -32,12 +32,10 @@ Typical GRILO configuration files start with this:
 
 ```json
 {
-  "GRILO": {
-    "Boot style": "Default",
-    "Diagnostic messages": false,
-    "Print diagnostic messages to console": false,
-    "Additional bootable folders": []
-  }
+  "Boot style": "Default",
+  "Diagnostic messages": false,
+  "Print diagnostic messages to console": false,
+  "Additional bootable folders": []
 }
 ```
 
