@@ -9,3 +9,7 @@ description: >-
 When you upgrade GRILO to a version that contains a higher API version that you have, you'll need to follow the compatibility notes.
 
 Select your previous API version to upgrade from:
+
+{% content-ref url="upgrading-from-api-v1.0.md" %}
+[upgrading-from-api-v1.0.md](upgrading-from-api-v1.0.md)
+{% endcontent-ref %}

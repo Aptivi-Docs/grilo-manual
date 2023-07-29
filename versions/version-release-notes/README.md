@@ -11,3 +11,9 @@ Every single version of GRILO comes with many changes, including feature additio
 {% content-ref url="api-v1.0-series.md" %}
 [api-v1.0-series.md](api-v1.0-series.md)
 {% endcontent-ref %}
+
+## API v2.0 series
+
+{% content-ref url="api-v2.0-series.md" %}
+[api-v2.0-series.md](api-v2.0-series.md)
+{% endcontent-ref %}
