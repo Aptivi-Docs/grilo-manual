@@ -37,3 +37,13 @@ Unfortunately, you'll have to edit your configuration file manually. Luckily, it
 {% hint style="info" %}
 You can now easily access configuration using the `Instance` property found in `Config`.
 {% endhint %}
+
+### Loading changes
+
+Since GRILO 1.1.0, we've made a substantial effort to fix dependency loading so that different applications that need different versions of one library (for example, Nitrocid KS and GRILO both need Terminaux) can resolve their dependencies appropriately.
+
+Unfortunately, this means that you'll have to move all your .NET 4.8 bootable apps to a different directory, which the page linked below will explain this in depth:
+
+{% content-ref url="../../power-users/boot-apps.md" %}
+[boot-apps.md](../../power-users/boot-apps.md)
+{% endcontent-ref %}

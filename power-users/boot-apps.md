@@ -56,8 +56,11 @@ You can specify multiple JSON objects for different arguments passed to the targ
 * `Arguments`
   * Arguments to pass to the entry point.
   * The type of this variable is an **array** of **strings**
+* `BootFilePath`
+  * This specifies an assembly file containing a class that implements `IBootable`. This path is relative to the boot folder found under the `Bootables` folder.
+  * The type of this variable is a **string**
 
-For example, Kernel Simulator makes use of the boot metadata file to make it bootable under several modes. One of them is shown in this example:
+For example, Nitrocid KS makes use of the boot metadata file to make it bootable under several modes. One of them is shown in this example:
 
 ```json
 [
@@ -68,12 +71,20 @@ For example, Kernel Simulator makes use of the boot metadata file to make it boo
 ]
 ```
 
+{% hint style="warning" %}
+By default, GRILO searches every DLL file (for .NET 6.0) or EXE file (for .NET Framework 4.8) to check to see if they are bootable. Most bootable applications should work properly in this case.
+
+If you found that your bootable app is behaving erratically due to this behavior, such as an app that relies on Inxi.NET or any platform-specific library that has its own assembly in the runtimes folder, you can use the `BootFilePath` property to force GRILO to load only this file.
+
+When you force GRILO to only load a specified file in the above property, the resolver will load the correct versions of the runtime-dependent libraries to ensure that your bootable application will work, regardless of the platform.
+{% endhint %}
+
 ## Boot Parsing
 
-When GRILO starts up, the bootloader scans the bootable apps path, `GRILO/Bootables`, and any additional folders to scan them for any bootable applications found under their respective folders.
+When GRILO starts up, the bootloader scans the bootable apps path, `GRILO/Bootables` (`GRILO/Bootables_DotNetFx` for .NET Framework 4.8 bootable apps), and any additional folders to scan them for any bootable applications found under their respective folders.
 
 Each directory scanned under the bootable application library will be checked for any `.dll` files for .NET 6.0 GRILO or any `.exe` files for .NET Framework 4.8 GRILO.
 
-If GRILO found an assembly that implements the `IBootable` interface as we showed you earlier, it'll do some further parsing, starting from the `BootMetadata.json` found in the respective directory. GRILO then adds the boot app into the list.
+If GRILO found an assembly that implements the `IBootable` interface as we showed you earlier, it'll do some further parsing, starting from the `BootMetadata.json` found in the respective directory. GRILO then adds the boot app into the list after all the dependencies are loaded to a separate application domain as necessary.
 
 As soon as GRILO shows the boot menu using your custom boot style configured by the bootloader configuration file, the boot menu attempts to display all the bootable applications.

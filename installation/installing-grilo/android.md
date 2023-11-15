@@ -27,12 +27,14 @@ Once you're done, follow the steps:
 5. Ensure that you've updated the package cache
    * `apt update`
    * `apt dist-upgrade`
-6. Install the .NET 6.0 runtime
+6. Install the .NET 6.0, .NET 7.0, or .NET 8.0 runtime
    * `apt install dotnet-runtime-6.0`
+   * `apt install dotnet-runtime-7.0`
+   * `apt install dotnet-runtime-8.0`
 7. Install `wget` to download the latest release from [this page](https://github.com/Aptivi/GRILO/releases).
    * `apt install wget`
-   * `wget https://github.com/Aptivi/GRILO/releases/download/vx.x.x/vx.x.x-Core.rar`
-8. Install `unrar` (from multiverse) to extract the files
-   * `apt install unrar`
-   * `unrar vx.x.x-Core.rar`
+   * `wget https://github.com/Aptivi/GRILO/releases/download/vx.x.x/x.x.x-bin.zip`
+8. Install `unzip` to extract the files
+   * `apt install unzip`
+   * `unzip x.x.x-bin.zip`
 9. Execute `dotnet GRILO.Bootloader.dll`
