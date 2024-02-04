@@ -98,3 +98,25 @@ This makes sure that we've organized these classes in a better way.
 {% hint style="info" %}
 Your boot styles need to update the references as shown in the above code block.
 {% endhint %}
+
+#### Used screen feature
+
+{% code title="IBootStyle.cs" lineNumbers="true" %}
+```csharp
+void Render();
+void RenderHighlight(int chosenBootEntry);
+void RenderModalDialog(string content);
+void RenderBootingMessage(string chosenBootName);
+void RenderBootFailedMessage(string content);
+void RenderSelectTimeout(int timeout);
+void ClearSelectTimeout();
+```
+{% endcode %}
+
+Starting from 1.2.0, GRILO uses the screen feature for flexibility. This means that these functions have been changed to return a string of a terminal sequence representing each part of the boot style.
+
+{% hint style="info" %}
+You must use a string builder to be able to easily build your sequences for rendering. Beware that you must adhere to the Terminaux guidelines as demonstrated here:
+
+[Console Screen](https://app.gitbook.com/s/G0KrE9Uk2AiblqjWtpAo/usage/console-tools/console-screen "mention")
+{% endhint %}

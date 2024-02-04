@@ -23,13 +23,13 @@ To implement your custom boot style, these steps must be followed:
 5. Right-click on `Dependencies` -> `Manage NuGet Packages`, find `GRILO.Bootloader`, and install it.
 6. Once the package is installed, go to the `Class1.cs` source file
 7. Write next to the class file `: BaseBootStyle, IBootStyle` and import the required namespace by `using GRILO.Bootloader.BootStyle;`.
-8. Override all the necessary methods using the `override` keyword for each one.
+8. Override the necessary methods using the `override` keyword for each one as appropriate.
    * `public override Dictionary<ConsoleKeyInfo, Action<BootAppInfo>> CustomKeys { get; }`
-   * `public override void Render()`
-   * `public override void RenderHighlight(int chosenBootEntry)`
-   * `public override void RenderModalDialog(string content)`
-   * `public override void RenderBootingMessage(string chosenBootName)`
-   * `public override void RenderBootFailedMessage(string content)`
+   * `public override string Render()`
+   * `public override string RenderHighlight(int chosenBootEntry)`
+   * `public override string RenderModalDialog(string content)`
+   * `public override string RenderBootingMessage(string chosenBootName)`
+   * `public override string RenderBootFailedMessage(string content)`
 9. Now, implement everything as you wish. Once you're done, click on the Build menu and select Build Solution.
 10. Once the solution is built, open the file explorer to the solution directory by right-clicking on the solution and selecting `Open Folder in File Explorer`.
 11. Navigate to the output directory and copy the `.dll` file to `Splashes` under the `%localappdata%/GRILO` folder.
