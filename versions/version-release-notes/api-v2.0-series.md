@@ -34,3 +34,16 @@ This version was released on October 23rd, 2023, to give GRILO a speed boost whe
 ### Version 1.1.3
 
 This version was released on November 14th, 2023, as a celebration of the .NET 8.0 release!
+
+### Version 1.1.4
+
+This version was released on December 21st, 2023, to facilitate debugging the application using Source Link.
+
+### Version 1.2.0
+
+This version was released on February 4th, 2024, to increase the flexibility of the application.
+
+* Re-structured the classes
+* Updated Terminaux and made rendering more flexible
+* Removed printing diagnostics to the console
+* General improvements

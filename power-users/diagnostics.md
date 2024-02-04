@@ -4,7 +4,7 @@ description: How do you diagnose the bootloader?
 
 # 🦠 Diagnostics
 
-GRILO contains diagnostic tools that can be enabled with the `Diagnostic messages` variable found in the bootloader configuration. It basically saves all the debug information written with the `DiagnosticsWriter.WriteDiag()` function found in the `GRILO.Bootloader.Diagnostics` namespace.
+GRILO contains diagnostic tools that can be enabled with the `Diagnostic messages` variable found in the bootloader configuration. It basically saves all the debug information written with the `DiagnosticsWriter.WriteDiag()` function.
 
 The following diagnostics levels (`DiagnosticsLevel` enum) are usable:
 
@@ -28,4 +28,6 @@ where:
 * `content`
   * Any message to be written
 
-If the printing to console option is enabled, you can also see the diagnostic messages being printed to the console **live**.
+{% hint style="info" %}
+Before GRILO 1.2.0, if the printing to console option is enabled, you can also see the diagnostic messages being printed to the console **live**.
+{% endhint %}

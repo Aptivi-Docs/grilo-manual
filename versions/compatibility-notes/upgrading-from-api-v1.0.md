@@ -6,6 +6,10 @@ description: Do you want to upgrade from API v1.0?
 
 When you're trying to upgrade to a version of GRILO that provides the next version of API, like GRILO 1.0.0 (API 2.0), you'll have to follow these steps to ensure that you'll get a smooth upgrade process.
 
+## Binary compatibility
+
+In order to upgrade your boot styles and GRILO to 1.0.0 or higher, you'll have to first follow the two changes described below, then you'll have to change the boot styles as follows:
+
 ### Configuration changes
 
 None of the APIs are affected, but we decided to change the mechanism of the configuration so that it uses the serialization and deserialization techniques instead of the standard LINQ parser.
@@ -47,3 +51,50 @@ Unfortunately, this means that you'll have to move all your .NET 4.8 bootable ap
 {% content-ref url="../../power-users/boot-apps.md" %}
 [boot-apps.md](../../power-users/boot-apps.md)
 {% endcontent-ref %}
+
+## Breaking changes
+
+We've made breaking changes between API v1.0 and API v2.0 in which you'll have to follow to ensure smooth transition of your boot styles:
+
+### From 1.0.0 to 1.2.0
+
+Between 1.0.0 and 1.2.0, we've made breaking changes that may affect your boot styles:
+
+#### Moved classes around
+
+{% code title="" lineNumbers="true" %}
+```csharp
+// GRILO.Bootloader.BootApps to GRILO.Bootloader.Boot.Apps
+public class BootAppInfo
+public static class BootManager
+
+// GRILO.Bootloader.Diagnostics to GRILO.Bootloader.Boot.Diagnostics
+public enum DiagnosticsLevel
+public static class DiagnosticsWriter
+
+// GRILO.Bootloader.BootStyle to GRILO.Bootloader.Boot.Style
+public interface IBootStyle
+public abstract class BaseBootStyle : IBootStyle
+public static class BootStyleManager
+
+// GRILO.Bootloader.Configuration.Instance to GRILO.Bootloader.Common.Configuration.Instance
+public class ConfigInstance
+
+// GRILO.Bootloader.Configuration to GRILO.Bootloader.Common.Configuration
+public static class Config
+
+// GRILO.Bootloader to GRILO.Bootloader.Common.Configuration
+public static class GRILOPaths -> ConfigPaths
+
+// GRILO.Bootloader to GRILO.Bootloader.Common
+public class GRILOException : Exception -> BootloaderException
+```
+{% endcode %}
+
+We needed to organize the bootloader classes more efficiently to ensure easy maintenance, so we've decided to move classes around, including those that are internal and not documented here, to achieve better organization.
+
+This makes sure that we've organized these classes in a better way.
+
+{% hint style="info" %}
+Your boot styles need to update the references as shown in the above code block.
+{% endhint %}

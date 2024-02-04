@@ -34,8 +34,9 @@ Typical GRILO configuration files start with this:
 {
   "Boot style": "Default",
   "Diagnostic messages": false,
-  "Print diagnostic messages to console": false,
-  "Additional bootable folders": []
+  "Additional bootable folders": [],
+  "Timeout to boot to selection": 60,
+  "Default boot entry selection": 0
 }
 ```
 
@@ -47,11 +48,14 @@ The following configuration descriptions are listed below:
 * `Diagnostic messages`
   * Whether to enable storing the diagnostic messages to the `BootloaderDebug.log` file
   * The type of this variable is a **boolean**
-* `Print diagnostic messages to console`
-  * If the bootloader diagnostics is enabled, chooses whether to dump the diagnostic messages to the console
-  * The type of this variable is a **boolean**
 * `Additional bootable folders`
   * An array of complete file paths to additional bootable folders for the scanner to use
   * The type of this variable is an **array** of **strings**
+* `Timeout to boot to selection`
+  * Timeout in seconds to boot to selection if no key is pressed
+  * The type of this variable is an **integer**
+* `Default boot entry selection`
+  * Zero-based choice number for the default boot entry
+  * The type of this variable is an **integer**
 
 Each time GRILO starts up, it checks the settings file for any values and installs them to the bootloader, making it configurable.

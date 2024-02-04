@@ -49,3 +49,12 @@ public override Dictionary<ConsoleKeyInfo, Action<BootAppInfo>> CustomKeys { get
 ```
 
 If any key other than the `UP ARROW`, `DOWN ARROW`, and `ENTER`, the key handler attempts to parse the key according to the custom key list defined by your boot style. If the key pressed is the same as one of the defined keys, the handler executes the action with the chosen boot application, whose type is `BootAppInfo`, as the argument passed to it.
+
+## Bootloader state
+
+You can also access the bootloader state by referencing the `BootloaderState` class. This class provides you with the following options:
+
+* `WaitingForBootKey`
+* `WaitingForFirstBootKey`
+
+This can be used for your custom boot styles to change their behavior, depending on the state.
