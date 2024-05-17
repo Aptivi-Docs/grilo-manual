@@ -4,20 +4,20 @@
 
 ## Versions
 
-* [🗞 Version Release Notes](versions/version-release-notes/README.md)
+* [🗞️ Version Release Notes](versions/version-release-notes/README.md)
   * [💎 API v1.0 series](versions/version-release-notes/api-v1.0-series.md)
   * [🎆 API v2.0 series](versions/version-release-notes/api-v2.0-series.md)
-* [🗒 Compatibility Notes](versions/compatibility-notes/README.md)
+* [🗒️ Compatibility Notes](versions/compatibility-notes/README.md)
   * [🔼 Upgrading from API v1.0](versions/compatibility-notes/upgrading-from-api-v1.0.md)
 
 ## Installation
 
 * [📀 Installing GRILO](installation/installing-grilo/README.md)
-  * [🖥 Windows](installation/installing-grilo/windows.md)
+  * [🖥️ Windows](installation/installing-grilo/windows.md)
   * [🐧 Linux](installation/installing-grilo/linux.md)
   * [📱 Android](installation/installing-grilo/android.md)
-* [⬆ Upgrading GRILO](installation/upgrading-grilo/README.md)
-  * [🖥 Windows](installation/upgrading-grilo/windows.md)
+* [⬆️ Upgrading GRILO](installation/upgrading-grilo/README.md)
+  * [🖥️ Windows](installation/upgrading-grilo/windows.md)
   * [🐧 Linux](installation/upgrading-grilo/linux.md)
   * [📱 Android](installation/upgrading-grilo/android.md)
 
@@ -30,7 +30,7 @@
 
 ## Power Users
 
-* [⚙ Configuration](power-users/configuration.md)
+* [⚙️ Configuration](power-users/configuration.md)
 * [💡 Custom Boot Styles](power-users/custom-boot-styles.md)
 * [💽 Boot Apps](power-users/boot-apps.md)
 * [🦠 Diagnostics](power-users/diagnostics.md)
